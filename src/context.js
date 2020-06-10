@@ -33,30 +33,29 @@ useEffect(()=>{
         filterRooms();
         return;
     }
-
-    async function getData(){
-        try {
-            let {items} = await Client.getEntries({content_type:'resort',order:"sys.createdAt"});
-            let rooms = formatData(items);
-            let featuredRooms = rooms.filter(room=>room.featured === true);
-            let maxPrice = Math.max(...rooms.map(item=>item.price));
-            let maxSize = Math.max(...rooms.map(item=>item.size));
-            setData({...data, rooms, featuredRooms, sortedRooms:rooms, loading:false, price:maxPrice, maxPrice, maxSize});
-            
-        } catch (err) {
-            console.log(err);
-        }
-    }
-
     getData();
-
 },[counter]);
 
 
 
 
 
-const formatData = (items) =>{
+const getData = async () =>{
+    try {
+        let {items} = await Client.getEntries({content_type:'resort',order:"sys.createdAt"});
+        let rooms = formatData(items);
+        let featuredRooms = rooms.filter(room=>room.featured === true);
+        let maxPrice = Math.max(...rooms.map(item=>item.price));
+        let maxSize = Math.max(...rooms.map(item=>item.size));
+        setData({...data, rooms, featuredRooms, sortedRooms:rooms, loading:false, price:maxPrice, maxPrice, maxSize});
+        
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+
+const formatData = (items) =>{                                        // TO ADD ID AND IMAGES EASILY
         let tempItems = items.map(item=>{
             let id = item.sys.id;
             let images = item.fields.images.map(image=>image.fields.file.url);

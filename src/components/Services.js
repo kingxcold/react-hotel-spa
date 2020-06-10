@@ -9,22 +9,22 @@ const Services = () => {
     const [{services}] = useState({     /* ===> DESTRUCT services */
         services:[
             {
-                icon:<FaCocktail/>,
+                icon:<FaCocktail fontSize="4rem"/>,
                 title:'Free cocktails',
                 info:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, illum.'
             },
             {
-                icon:<FaHiking/>,
+                icon:<FaHiking fontSize="4rem"/>,
                 title:'Endless Hiking',
                 info:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, illum.'
             },
             {
-                icon:<FaShuttleVan/>,
+                icon:<FaShuttleVan fontSize="4rem"/>,
                 title:'Free shuttle',
                 info:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, illum.'
             },
             {
-                icon:<FaBeer/>,
+                icon:<FaBeer fontSize="4rem"/>,
                 title:'Strongest Beer',
                 info:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, illum.'
             }
