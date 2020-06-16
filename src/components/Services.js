@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import Title from './Title';
-import {FaCocktail, FaHiking, FaBeer, FaShuttleVan} from 'react-icons/fa';
+import {FaCocktail, FaHiking, FaSwimmingPool, FaStar, FaConciergeBell} from 'react-icons/fa';
 
 
 
@@ -14,18 +14,18 @@ const Services = () => {
                 info:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, illum.'
             },
             {
-                icon:<FaHiking fontSize="4rem"/>,
-                title:'Endless Hiking',
+                icon:<FaStar fontSize="4rem"/>,
+                title:'5 Stars Services',
                 info:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, illum.'
             },
             {
-                icon:<FaShuttleVan fontSize="4rem"/>,
-                title:'Free shuttle',
+                icon:<FaSwimmingPool fontSize="4rem"/>,
+                title:'Swiming Pool',
                 info:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, illum.'
             },
             {
-                icon:<FaBeer fontSize="4rem"/>,
-                title:'Strongest Beer',
+                icon:<FaConciergeBell fontSize="4rem"/>,
+                title:'Breakfast',
                 info:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, illum.'
             }
         ]

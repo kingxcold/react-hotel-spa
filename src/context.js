@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-/* import items from './data'; */
+/* import items from './data'; */          //FOR LOCAL DATA
 import Client from './Contentful';
 
 

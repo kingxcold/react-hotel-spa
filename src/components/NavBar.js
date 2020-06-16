@@ -12,7 +12,7 @@ const NavBar = () => {
         <nav className="navbar">
             <div className="nav-center">
                 <div className="nav-header">
-                    <Link to= "/"><img src={logo} alt="Beach Resort"/></Link>
+                    <Link to= "/"><img className="svvg" src={logo} alt="Hotel"/></Link>
                     <button onClick={(e)=>handleToggle(e)} type="button" className="nav-btn">
                         <FaAlignRight className="nav-icon"/>
                     </button>
